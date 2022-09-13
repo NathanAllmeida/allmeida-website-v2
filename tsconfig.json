@@ -1,0 +1,25 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.web.json",
+    "include": [
+        "env.d.ts",
+        "src/**/*",
+        "src/**/*.vue"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "strict": true,
+        "target": "es5",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    },
+    "references": [
+        {
+            "path": "./tsconfig.config.json"
+        }
+    ]
+}
