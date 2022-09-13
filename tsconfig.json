@@ -8,9 +8,10 @@
     "compilerOptions": {
         "baseUrl": ".",
         "strict": true,
-        "target": "es5",
-        "module": "es2015",
+        "target": "esnext",
+        "module": "esnext",
         "moduleResolution": "node",
+        "allowJs": true,
         "paths": {
             "@/*": [
                 "./src/*"

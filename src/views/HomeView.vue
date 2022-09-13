@@ -2,7 +2,7 @@
 
     var date1 = new Date();
     var date2 = new Date("2017/02/01");
-    var diff = date1-date2;
+    var diff = date1.getTime() - date2.getTime();
     var ageDate = new Date(diff); // miliseconds from epoch
     var date = Math.abs(ageDate.getUTCFullYear() - 1970);
 
