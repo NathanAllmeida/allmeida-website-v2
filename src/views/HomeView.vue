@@ -26,7 +26,7 @@
 
 <style scoped>
     .tag-lang{
-        background-color: hsla(160, 100%, 37%, 1);
+        background-color: #423eff;
         padding: 5px 15px;
         font-weight: bold;
         border-radius: 5px;

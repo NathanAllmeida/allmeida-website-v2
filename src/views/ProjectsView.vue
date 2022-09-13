@@ -115,7 +115,7 @@
 }
 
 .card{
-    background-color: hsla(160, 100%, 37%, 1);
+    background-color: #423eff;
     margin-top: 5px;
     margin-bottom: 5px;
 }

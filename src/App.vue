@@ -75,13 +75,13 @@
 }
     .btn-primary{
         border-radius: 0;
-        background-color: hsla(160, 100%, 37%, 1);
-        border-color:hsla(160, 100%, 37%, 1);
+        background-color: #423eff;
+        border-color:#423eff;
     }
     .btn-primary:hover{
         border-radius: 0;
-        background-color: hsla(160, 100%, 37%, 1) !important;
-        border-color:hsla(160, 100%, 37%, 1) !important;
+        background-color: #423eff !important;
+        border-color:#423eff !important;
     }
 header {
     line-height: 1.5;
@@ -174,7 +174,7 @@ h3 {
 }
 
 .title-name{
-    border-right: 5px solid hsla(160, 100%, 37%, 1);
+    border-right: 5px solid #423eff;
     width: auto;
     display:inline-block;
     animation-name: title-name-cursor;
@@ -184,7 +184,7 @@ h3 {
 
 @keyframes title-name-cursor {
   from {
-    border-right: 5px solid hsla(160, 100%, 37%, 1);
+    border-right: 5px solid #423eff;
   }
   to {border-right: none;}
 }
@@ -194,6 +194,6 @@ nav a{
 }
 nav a.router-link-active{
     font-weight: bold;
-    color: hsla(160, 100%, 37%, 1) !important;
+    color: #423eff !important;
 }
 </style>
