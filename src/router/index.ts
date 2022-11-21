@@ -34,6 +34,11 @@ const router = createRouter({
       name: "code",
       component: () => import("../views/CodeView.vue"),
     },
+    {
+      path: "/allmeida-tech",
+      name: "allmeida-tech",
+      component: () => import("../views/FreelancerView.vue"),
+    },
   ],
 });
 
