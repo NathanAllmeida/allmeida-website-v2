@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createSSRApp } from "vue";
 import { createPinia } from "pinia";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -16,11 +16,13 @@ library.add(faPhp)
 library.add(faJs)
 library.add(faGithub)
 
-const app = createApp(App);
+export function createApp() {
+    const app = createSSRApp(App);
 
-app.use(createPinia());
-app.use(router);
+    app.use(createPinia());
+    app.use(router);
 
-app.component('font-awesome-icon', FontAwesomeIcon)
+    app.component('font-awesome-icon', FontAwesomeIcon)
 
-app.mount("#app");
+    return { app, router }
+}
