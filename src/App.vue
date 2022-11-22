@@ -28,26 +28,41 @@
 </script>
 
 <template>
-    <header>
-        <div class="row">
-            <div class="col-md-12">
-               <div class="d-flex align-items-center">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img alt="Minha foto" class="logo" src="@/assets/photo.jpg" height="300" />
+    <div class="row row-line">
+        <div class="col-md-12">
+            <nav>
+                <RouterLink to="/">Home</RouterLink>
+                <RouterLink to="/about">Sobre Mim</RouterLink>
+                <RouterLink to="/experiences">Experiências</RouterLink>
+                <RouterLink to="/projects">Projetos</RouterLink>
+                <RouterLink to="/contact">Contato</RouterLink>
+                <RouterLink to="/mentoring">Mentoria </RouterLink>
+                <a href="https://github.com/NathanAllmeida" class="btn btn-primary m-0"><font-awesome-icon icon="fa-brands fa-github" /></a>
+            </nav>
+        </div>
+    </div>
+    <div id="grid">
+        <header>
+            <div class="row">
+                <div class="col-md-12">
+                <div class="d-flex align-items-center">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img alt="Minha foto" class="logo" src="@/assets/photo.jpg" height="300" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="h-100 d-flex align-items-center justify-content-center">
-                                <div class="wrapper">
-                                    <div class="greetings">
-                                        <h1 class="title-name green">{{ name_visible }}</h1>
-                                        <h3>
-                                            Desenvolvedor PHP Pleno<br>
-                                            Desenvolvedor Mobile<br>
-                                            Desenvolvedor Freelancer
-                                        </h3>
+                            <div class="col-md-6">
+                                <div class="h-100 d-flex align-items-center justify-content-center">
+                                    <div class="wrapper">
+                                        <div class="greetings">
+                                            <h1 class="title-name green">{{ name_visible }}</h1>
+                                            <h3>
+                                                Desenvolvedor PHP Pleno<br>
+                                                Desenvolvedor Mobile<br>
+                                                Desenvolvedor Freelancer
+                                            </h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -55,23 +70,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
-                <nav>
-                    <RouterLink to="/">Home</RouterLink>
-                    <RouterLink to="/about">Sobre Mim</RouterLink>
-                    <RouterLink to="/experiences">Experiências</RouterLink>
-                    <RouterLink to="/projects">Projetos</RouterLink>
-                    <RouterLink to="/contact">Contato</RouterLink>
-                    <RouterLink to="/code">Code.php </RouterLink>
-                </nav>
-                <a href="https://github.com/NathanAllmeida" class="btn btn-primary mb-3"><font-awesome-icon icon="fa-brands fa-github" /></a>
-            </div>
-        </div>
-    </header>
+        </header>
 
 
 
-    <RouterView />
+        <RouterView />
+    </div>
 
 
 </template>

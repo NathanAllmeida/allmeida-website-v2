@@ -72,3 +72,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+.btn-primary{
+    border-radius: 0;
+    background-color: #423eff;
+    border-color:#423eff;
+}
+.btn-primary:hover{
+    border-radius: 0;
+    background-color: #423eff !important;
+    border-color:#423eff !important;
+}

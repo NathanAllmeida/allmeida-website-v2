@@ -20,6 +20,11 @@
             <span class="tag-lang">Ionic</span>
             <span class="tag-lang">Angular</span>
             <span class="tag-lang">Flask</span>
+            <br><br>
+            <a href="/experiences" class="btn btn-primary">Um pouco do meu trajeto</a>
+        </div>
+
+        <div class="col-md-12">
         </div>
     </div>
 </template>
