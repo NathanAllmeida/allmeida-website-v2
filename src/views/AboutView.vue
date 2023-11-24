@@ -8,26 +8,18 @@ var date = Math.abs(ageDate.getUTCFullYear() - 1970);
 
 </script>
 <template>
-    <div class="about">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="green">Sobre mim</h1>
-            </div>
-            <div class="col-md-12">
-                <p>Olá! Eu sou o Nathan, moro em BH, tenho 23 anos, casado, trabalho com programação à {{date}} e vou
-                    contar um pouquinho sobre mim. <br>
-                    Meu primeiro contato com programação foi em 2014 em um curso técnico de programação, onde minha
-                    paixão por programação surgiu, lá aprendi C++, Java, HTML, CSS, Jquery e PHP. <br>
-                    Após a conclusão do curso em 2017, fiz um estágio e desde então estou na área. Durante esse tempo
-                    desde 2017, trabalhei majoritariamente com PHP, mas também aprendi e usei linguagens como Javascript
-                    e seus frameworks, como angular e ionic, também tive contato por alto com outros frameworks como
-                    node e vue. Atualmente estudo Python, onde meu foco é Machine Learning e alguns framework como
-                    Django e Flask. <br>Sou uma pessoa que gosto de desafios e aprender coisas novas e tenho como
-                    objetivo ajudar pessoas que queiram entrar nessa área maravilhosa ou ajudar aqueles que já estão
-                    nessa área a crescerem e com isso surgiu a ideia do projeto Code.php onde ajudo aqueles que querem
-                    aprender o básico da programação.
-                </p>
-            </div>
+    <div class="row justify-content-center w-100">
+        <div class="col-md-12">
+            <h1 class="green text-center mb-4">Sobre mim</h1>
+        </div>
+        <div class="col-md-12"></div>
+        <div class="col-md-6">
+            <p>
+                Olá, sou o Nathan, residente em BH, e aos 23 anos, casado, venho compartilhar um pouco da minha jornada na programação. <br><br>
+                Minha trajetória começou em 2014, durante um curso técnico que despertou minha paixão por programação. Ali, mergulhei em linguagens como C++, Java, HTML, CSS, Jquery e PHP.<br><br>
+                Após concluir o curso em 2017, embarquei em um estágio que marcou o início da minha carreira na área. Desde então, tenho trabalhado principalmente com PHP, mas também explorei linguagens como Javascript, envolvendo frameworks como Angular e Ionic. Além disso, tive experiência superficial com outros frameworks como Node e Vue. Atualmente, meu foco está em Python, onde mergulho no universo do Machine Learning e exploro também frameworks como Django e Flask.<br><br>
+                Gosto de encarar desafios e buscar constantemente novos conhecimentos. Tenho a meta de desenvolver sistemas com excelência e maestria, buscando constantemente elevar meu nível de habilidade. Além disso, tenho a satisfação de orientar aqueles que estão dando os primeiros passos nesse fascinante campo, bem como impulsionar o crescimento daqueles que já trilham essa jornada. Essa motivação de compartilhar conhecimento deu origem ao projeto Code.php, onde dedico meu tempo para auxiliar interessados a adquirirem as bases da programação. Estou aqui para contribuir e evoluir juntos nessa empolgante jornada.<br><br>
+            </p>
         </div>
     </div>
 </template>
@@ -35,7 +27,6 @@ var date = Math.abs(ageDate.getUTCFullYear() - 1970);
 <style>
 @media (min-width: 1024px) {
     .about {
-        min-height: 100vh;
         display: flex;
         align-items: center;
     }

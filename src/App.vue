@@ -1,111 +1,77 @@
 <script>
-    export default{
-        data(){
-            return{
-                name_visible:"",
-                name:"Nathan Almeida"
+export default {
+    data() {
+        return {
+            name_visible: "",
+            date: "",
+            name: "Nathan Almeida",
+        };
+    },
+    methods: {
+        setChar: function (index) {
+            var name = this.name.split("");
+
+            if (index < name.length) {
+                this.name_visible += name[index];
+                console.log(this.name_visible);
+                index++;
+                setTimeout(() => {
+                    this.setChar(index);
+                }, 150);
             }
         },
-        methods:{
-            setChar:function(index){
-                var name = this.name.split("");
-
-                if(index<name.length){
-                    this.name_visible += name[index]
-                    console.log(this.name_visible)
-                    index++
-                    setTimeout(() => {
-                        this.setChar(index);
-                    }, 150);
-                }
-
-            }
-        },
-        mounted: function(){
-            this.setChar(0)
-        }
-    }
+    },
+    mounted: function () {
+        var date1 = new Date();
+        var date2 = new Date("2017/02/01");
+        var diff = date1.getTime() - date2.getTime();
+        var ageDate = new Date(diff); // miliseconds from epoch
+        this.date = Math.abs(ageDate.getUTCFullYear() - 1970);
+        this.setChar(0);
+    },
+};
 </script>
 
 <template>
-    <div class="row row-line">
-        <div class="col-md-12">
-            <nav>
-                <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/about">Sobre Mim</RouterLink>
-                <RouterLink to="/experiences">Experiências</RouterLink>
-                <RouterLink to="/projects">Projetos</RouterLink>
-                <RouterLink to="/contact">Contato</RouterLink>
-                <RouterLink to="/mentoring">Mentoria </RouterLink>
-                <a href="https://github.com/NathanAllmeida" class="btn btn-primary m-0"><font-awesome-icon icon="fa-brands fa-github" /></a>
-            </nav>
-        </div>
-    </div>
-    <div id="grid">
-        <header>
-            <div class="row">
-                <div class="col-md-12">
-                <div class="d-flex align-items-center">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <img alt="Minha foto" class="logo" src="@/assets/photo.jpg" height="300" />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="h-100 d-flex align-items-center justify-content-center">
-                                    <div class="wrapper">
-                                        <div class="greetings">
-                                            <h1 class="title-name green">{{ name_visible }}</h1>
-                                            <h3>
-                                                Desenvolvedor PHP Pleno<br>
-                                                Desenvolvedor Mobile<br>
-                                                Desenvolvedor Freelancer
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <header class="w-100 top-0 left-0">
+        <div class="row row-line w-100  ">
+            <div class="col-md-12">
+                <div class="d-flex w-100 justify-content-center">
+                    <h4 class="text-center title-name green mt-4 fw-bolder w-">{{ name_visible }}</h4>
                 </div>
+                <h5 class="text-center mt-4">Desenvolvedor PHP Pleno <span class="mx-2">•</span> Desenvolvedor Mobile  <span class="mx-2">•</span> Desenvolvedor Freelancer</h5>
             </div>
-        </header>
+            <div class="col-md-12">
+                <nav class="d-flex justify-content-center">
+                    <RouterLink to="/">Home</RouterLink>
+                    <RouterLink to="/about">Sobre Mim</RouterLink>
+                    <RouterLink to="/experiences">Experiências</RouterLink>
+                    <RouterLink to="/projects">Projetos</RouterLink>
+                    <RouterLink to="/contact">Contato</RouterLink>
+                    <RouterLink to="/mentoring">Mentoria </RouterLink>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-
-
+    <div id="main-content" class="w-100">
         <RouterView />
     </div>
-
-
 </template>
 
 <style scoped>
-
-.btn-primary svg{
+.btn-primary svg {
     font-size: 25px;
 }
-    .btn-primary{
-        border-radius: 0;
-        background-color: #423eff;
-        border-color:#423eff;
-    }
-    .btn-primary:hover{
-        border-radius: 0;
-        background-color: #423eff !important;
-        border-color:#423eff !important;
-    }
-header {
-    line-height: 1.5;
-    max-height: 100vh;
-    padding-right: 120px !important;
-    width: 100%;
+.btn-primary {
+    border-radius: 0;
+    background-color: #423eff;
+    border-color: #423eff;
 }
-
-.logo {
-    display: block;
-    margin: 0 auto 2rem;
-    border-radius: 15px;
+.btn-primary:hover {
+    border-radius: 0;
+    background-color: #423eff !important;
+    border-color: #423eff !important;
 }
 
 nav {
@@ -117,6 +83,7 @@ nav {
 
 nav a.router-link-exact-active {
     color: var(--color-text);
+    border-bottom: 3px solid white;
 }
 
 nav a.router-link-exact-active:hover {
@@ -125,35 +92,19 @@ nav a.router-link-exact-active:hover {
 
 nav a {
     display: inline-block;
-    padding: 0 1rem;
-    border-left: 1px solid var(--color-border);
+    padding: 10px 1.38rem;
+    /* border-left: 1px solid var(--color-border); */
 }
 
 nav a:first-of-type {
-    border: 0;
+    /* border: 0; */
 }
 @media (max-width: 1024px) {
-    header {
-        padding-right: 0 !important;
-    }
 }
 
 @media (min-width: 1024px) {
-    header {
-        display: flex;
-        place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
-    }
-
     .logo {
         margin: 0 2rem 0 0;
-    }
-
-    header .wrapper {
-        display: flex;
-        place-items: flex-start;
-        flex-wrap: wrap;
-        margin-left: 20px;
     }
 
     nav {
@@ -166,18 +117,13 @@ nav a:first-of-type {
     }
 }
 
-
 h1 {
     font-weight: 500;
     font-size: 2.6rem;
     top: -10px;
 }
 
-h3 {
-    font-size: 1.2rem;
-}
-
-.greetings{
+.greetings {
     min-width: 320px;
 }
 .greetings h1,
@@ -192,10 +138,22 @@ h3 {
     }
 }
 
+nav a {
+    color: #ccc !important;
+}
+nav a.router-link-active {
+    font-weight: bold;
+    color: #423eff !important;
+}
+
+
 .title-name{
-    border-right: 5px solid #423eff;
-    width: auto;
-    display:inline-block;
+    display: flex;
+    justify-self: center;
+    width: fit-content;
+    /* border-right: 5px solid #423eff; */
+    /* width: auto; */
+    /* display:inline-block; */
     animation-name: title-name-cursor;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -206,13 +164,5 @@ h3 {
     border-right: 5px solid #423eff;
   }
   to {border-right: none;}
-}
-
-nav a{
-    color: #ccc !important;
-}
-nav a.router-link-active{
-    font-weight: bold;
-    color: #423eff !important;
 }
 </style>
